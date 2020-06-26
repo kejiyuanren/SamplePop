@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".CpuProfilerActivity">
 
+    <Button
+        android:id="@+id/calculate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:onClick="onCpuCalculateMonitor"
+        android:text="模拟高频计算"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cal_result_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:hint="result"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/calculate_btn"
+        app:layout_constraintStart_toEndOf="@+id/calculate_btn"
+        app:layout_constraintTop_toTopOf="@+id/calculate_btn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
