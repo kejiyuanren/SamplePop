@@ -20,4 +20,9 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onCpuProfilerTest() called with: view = [" + view + "]");
         startActivity(new Intent(this, CpuProfilerActivity.class));
     }
+
+    public void onMemoryProfilerTest(View view) {
+        Log.d(TAG, "onMemoryProfilerTest() called with: view = [" + view + "]");
+        startActivity(new Intent(this, MemoryProfilerActivity.class));
+    }
 }

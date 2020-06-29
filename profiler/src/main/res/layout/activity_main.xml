@@ -19,4 +19,17 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/memory_profiler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_blue_bright"
+        android:onClick="onMemoryProfilerTest"
+        android:padding="5dp"
+        android:text="Memory_Profiler"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cpu_profiler" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

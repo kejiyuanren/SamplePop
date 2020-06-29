@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MemoryProfilerActivity">
+
+    <TextView
+        android:id="@+id/memory_type_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Handler测试类型选择"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/memory_handler_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memory_type_tip">
+
+        <RadioButton
+            android:id="@+id/handler_no_static"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:text="hanlder使用no-static内部类" />
+
+        <RadioButton
+            android:id="@+id/handler_inner_class"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="handler使用匿名内部类" />
+
+        <RadioButton
+            android:id="@+id/handler_static_weak"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="handler静态内部类 + 弱引用" />
+
+        <RadioButton
+            android:id="@+id/handler_no_static_clear_message"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="handler消息队列清空" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/monitor_handler_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="#FFF2F8F7"
+        android:onClick="onMemoryHandlerMonitor"
+        android:padding="5dp"
+        android:text="模拟handler泄漏"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memory_handler_type" />
+
+    <TextView
+        android:id="@+id/memory_type_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:text="result"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monitor_handler_start" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
