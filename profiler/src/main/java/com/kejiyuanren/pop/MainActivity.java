@@ -30,4 +30,9 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onNetworkProfilerTest: ");
         startActivity(new Intent(this, NetworkProfilerActivity.class));
     }
+
+    public void onEnergyProfilerTest(View view) {
+        Log.d(TAG, "onEnergyProfilerTest: ");
+        startActivity(new Intent(this, EnergyProfilerActivity.class));
+    }
 }
