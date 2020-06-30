@@ -25,4 +25,9 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onMemoryProfilerTest() called with: view = [" + view + "]");
         startActivity(new Intent(this, MemoryProfilerActivity.class));
     }
+
+    public void onNetworkProfilerTest(View view) {
+        Log.d(TAG, "onNetworkProfilerTest: ");
+        startActivity(new Intent(this, NetworkProfilerActivity.class));
+    }
 }
