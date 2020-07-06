@@ -6,18 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <View
+        android:id="@+id/monitor_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@android:color/holo_blue_light" />
+
     <Button
         android:id="@+id/debug_api"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50sp"
+        android:onClick="onDebugApiMonitor"
         android:padding="10dp"
         android:text="debug api monitor"
         android:textAllCaps="false"
         android:textSize="25sp"
-        android:onClick="onDebugApiMonitor"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/frame_loss_monitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onFramesLossMonitor"
+        android:padding="10dp"
+        android:text="frame loss"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/debug_api" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
