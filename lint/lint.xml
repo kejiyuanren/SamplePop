@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- 自定义组件暂时不用要求使用v7support -->
+    <issue id="AppCompatCustomView" severity="ignore" />
+
+    <!-- Gradle Dependency -->
+    <!--<issue id="GradleDependency" severity="ignore" />-->
+    <!-- 有可能当前图片是一样的，名字不一样，但是业务场景不同，当前不用检查图片内容相同的情况，以便修改方便 -->
+    <issue id="IconDuplicates" severity="ignore" />
+    <!-- ignore: Image without contentDescription -->
+    <issue id="ContentDescription" severity="ignore" />
+    <!-- ignore: Using left/right instead of start/end attributes -->
+    <issue id="RtlHardcoded" severity="ignore" />
+    <!-- ignore: Overlapping items in RelativeLayout -->
+    <issue id="RelativeOverlap" severity="ignore" />
+    <!-- ignore: Missing support for Firebase App Indexing -->
+    <issue id="GoogleAppIndexingWarning" severity="ignore" />
+    <!-- ignore: Text size is too small, we following by ui designed -->
+    <issue id="SmallSp" severity="ignore" />
+    <!-- ignore: Missing labelFor attribute, 业务场景不需要 -->
+    <issue id="LabelFor" severity="ignore" />
+    <!-- ignore: Padding and margin symmetry -->
+    <issue id="RtlSymmetry" severity="ignore" />
+    <!-- ignore: Icon densities validation -->
+
+    <issue id="InvalidPackage">
+        <ignore regexp="okio-1.8.0.jar"/>
+    </issue>
+
+    <!-- Ignore the HardcodedText issue in the specified files -->
+    <issue id="HardcodedText">
+        <ignore path="res/layout/active_test.xml" />
+    </issue>
+
+    <!-- Change the severity of these to "error" -->
+    <issue id="HardcodedText" severity="error" />
+    <issue id="StaticFieldLeak" severity="error" />
+    <issue id="DrawAllocation" severity="error" />
+    <issue id="MergeRootFrame" severity="error" />
+    <issue id="UselessParent" severity="error" />
+    <issue id="Overdraw" severity="error" />
+
+</lint>
