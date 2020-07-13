@@ -1,3 +1,4 @@
+include ':lint'
 include ':systrace'
 include ':profiler'
 rootProject.name = "SamplePop"
