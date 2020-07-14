@@ -22,7 +22,7 @@ android {
     }
 
     lintOptions {
-//        lintConfig file("lint.xml")
+        lintConfig file("lint.xml")
 //        baseline file("lint-baseline.xml")
         abortOnError false
         checkAllWarnings true

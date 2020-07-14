@@ -10,7 +10,8 @@ public class KJYRIssueRegistry extends IssueRegistry {
     @Override
     public List<Issue> getIssues() {
         return Arrays.asList(
-                KJYRLogUtilDetector.ISSUE
+                KJYRLogUtilDetector.ISSUE,
+                KJYRSetTextDetector.SET_TEXT_I18N
 //                HandlerDetector.ISSUE
         );
     }

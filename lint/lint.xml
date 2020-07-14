@@ -40,4 +40,6 @@
     <issue id="UselessParent" severity="error" />
     <issue id="Overdraw" severity="error" />
 
+    <issue id="KJYR_SetTextI18n" severity="error" />
+    <issue id="KJYRLogUtilCase" severity="error" />
 </lint>
