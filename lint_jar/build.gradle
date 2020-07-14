@@ -1,0 +1,27 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.tools.lint:lint-api:27.0.0'
+    implementation 'com.android.tools.lint:lint-checks:27.0.0'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
+//注册 KJYRIssueRegistry，生成jar包
+jar {
+    manifest {
+        attributes("Lint-Registry": "com.kejiyuanren.lint_jar.KJYRIssueRegistry")
+    }
+}
+
+//声明依赖
+configurations {
+    lintJarOutput
+}
+
+//依赖项实现
+dependencies {
+    lintJarOutput files(jar)
+}
