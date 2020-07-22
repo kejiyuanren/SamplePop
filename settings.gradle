@@ -1,3 +1,4 @@
+include ':strictmode'
 include ':lint_aar'
 include ':lint_jar'
 include ':lint'
