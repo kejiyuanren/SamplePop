@@ -6,13 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/start_leak_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="50dp"
+        android:onClick="onLeakActivityStart"
+        android:padding="5dp"
+        android:text="LeakActivityStart"
+        android:textAllCaps="false"
+        android:textSize="25sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/fast_run_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="onFastRunTask"
+        android:padding="5dp"
+        android:text="FastRunTask"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_leak_activity" />
+
+    <Button
+        android:id="@+id/write_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="onWriteFile"
+        android:padding="5dp"
+        android:text="WriteFile"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fast_run_task" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
